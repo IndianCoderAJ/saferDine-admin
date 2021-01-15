@@ -64,7 +64,7 @@ export class Home extends Component {
                             Launch demo modal
                         </Button>
 
-                        <Modal show={this.state.show} onHide={this.handleClose}>
+                        <Modal className="modalconfirm-closesign"  centered show={this.state.show} onHide={this.handleClose}>
                             <Modal.Header className="modalconfirm-header" closeButton>
                                 <Modal.Title id="contained-modal-title-vcenter" >Modal heading</Modal.Title>
                             </Modal.Header>
