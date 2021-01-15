@@ -9,6 +9,7 @@ import tableReducer from './tableReducer';
 import tableRequestReducer from './tableRequestReducer';
 import errorReducer from './errorReducer';
 import notificationReducer from './notificationReducer';
+import modal from './modalconfirmReeducer';
 
 
 export default combineReducers({ 
@@ -22,4 +23,5 @@ export default combineReducers({
  errorData:errorReducer,
  notificationData:notificationReducer,
  loadingData:loaderReducer,
+ modalData:modal
 })

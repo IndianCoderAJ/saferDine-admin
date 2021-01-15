@@ -1,18 +1,39 @@
 import React, { Component } from 'react';
 import HeaderCards from '../common/HeaderCards';
+import ModalConfirm from '../common/ModalConfirm';
 import Footer from '../footer/';
 import Spiner from '../../loader/'
 import { connect } from 'react-redux';
+import {Modal,Button} from 'react-bootstrap'
+import '../../../css/modal-confirm.css'
+
 
 export class Home extends Component {
     constructor(){
         super();
         this.state = {
             req:[1,2],
+            show:false,
         }
+        this.handleShow = this.handleShow.bind(this);
+        this.handleClose  = this.handleClose.bind(this);
+
     }
     componentDidMount(){
-       
+       console.log(this.state.show);
+    }
+
+    handleClose(){
+        
+           this.setState({
+            show: false 
+           });
+    }
+    handleShow (){
+        console.log(this.state);
+        this.setState({
+            show: true 
+           });
     }
 
     render() {
@@ -34,9 +55,32 @@ export class Home extends Component {
                     <td>Pending</td>
                     <td className="action-btns">
             
-                        <i className="fas fa-eye" />
+                        <i className="fas fa-eye"></i>
             
-                        <i className="fas fa-edit" />
+                        <i className="fas fa-edit"> </i>
+                        <div>
+                            
+                        <Button variant="primary" onClick={this.handleShow}>
+                            Launch demo modal
+                        </Button>
+
+                        <Modal show={this.state.show} onHide={this.handleClose}>
+                            <Modal.Header className="modalconfirm-header" closeButton>
+                                <Modal.Title id="contained-modal-title-vcenter" >Modal heading</Modal.Title>
+                            </Modal.Header>
+                        
+                            <Modal.Body className="modalconfirm-body text-center">Woohoo, you're reading this text in a modal!</Modal.Body>
+                        
+                            <Modal.Footer className="modalconfirm-footerposition">
+                                <Button className="modalconfirm-yesbtn" onClick={this.handleClose}>
+                                  Yes
+                                </Button>
+                                <Button className="modalconfirm-nobtn" onClick={this.handleClose}>
+                                    No
+                                </Button>
+                            </Modal.Footer>
+                        </Modal>
+                        </div>
                     </td>
                 </tr>
 
@@ -58,7 +102,11 @@ export class Home extends Component {
                                 <div className="card card-static-2 mb-30">
                                     <div className="card-title-2">
                                         <h4>Recent Table Request</h4>
-                                        <a href="orders.html" className="view-btn hover-btn">View All</a>
+                                        <span className="dashboard-nextpreviousbtn">
+                                            <a href="" className="next-btn hover-previousbtn mr-2">Previous</a>
+                                            <a href="" className="previous-btn hovernext-btn">Next</a>
+                                        </span>
+                                        
                                     </div>
                                     <div className="card-body-table">
                                         <div className="table-responsive">
@@ -78,6 +126,7 @@ export class Home extends Component {
                                                     
                                                 </tbody>
                                             </table>
+                                            
                                         </div>
                                     </div>
                                 </div>

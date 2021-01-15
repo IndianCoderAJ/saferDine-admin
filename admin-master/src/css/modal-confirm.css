@@ -1,0 +1,81 @@
+.modalconfirm-header{
+    background-image:linear-gradient(#FF0036 ,#FF6787 80%);
+    color:white;
+    font-family: 'Fira Sans Condensed', sans-serif;
+    padding: 0.5rem 1rem;
+}
+.modalconfirm-body{
+    color:black;
+    font-size: 1rem;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+.modalconfirm-closesign{
+    color:white;
+}
+.modalconfirm-footerposition{
+    width: 100%;
+    justify-content: center;
+}
+.modalconfirm-yesbtn{
+    padding: 0.3rem 1.5rem;
+    background:#FF0036;
+    border-color:#FF0036;
+}
+.modalconfirm-yesbtn:hover{
+    text-decoration: none !important;
+    background: white;
+    color: #FF0036 !important;
+    border-color:#FF0036;
+    
+}
+.modalconfirm-nobtn{
+    padding: 0.3rem 1.5rem;
+    background:#FF6787;
+    border-color:#FF6787;
+}
+.modalconfirm-nobtn:hover{
+    text-decoration: none !important;
+    background: white;
+    color: #FF6787!important;
+    border-color: #FF6787!important;
+}
+.modalconfirm-closebackg:focus {
+    outline: none !important;
+}
+
+.next-btn {
+    padding: 0.3rem 1.4rem;
+    border: 1px solid#FF6787;
+    background:#FF6787;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    display: inline-block;
+}
+.previous-btn {
+    padding: 0.3rem 2rem;
+    border: 1px solid  #FF0036;
+    background:  #FF0036;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    display: inline-block;
+}
+.hover-previousbtn:hover {
+    text-decoration: none !important;
+    background: white;
+    color: #FF6787!important;
+}
+.hovernext-btn:hover {
+    text-decoration: none !important;
+    background: white;
+    color:  #FF0036 !important;
+}
+
+.dashboard-nextpreviousbtn{
+    margin-left: auto;
+}

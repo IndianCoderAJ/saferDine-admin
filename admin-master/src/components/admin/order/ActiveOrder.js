@@ -69,6 +69,7 @@ export class ActiveOrder extends Component {
                                     <div className="card-title-2">
                                         <h4>Active Orders</h4>
                                         <a href="orders.html" className="view-btn hover-btn">View All</a>
+                                       
                                     </div>
                                     <div className="card-body-table">
                                         <div className="table-responsive">
